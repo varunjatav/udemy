@@ -1,0 +1,38 @@
+<%- include("partials/header.ejs") %>
+<div class="container mx-auto mt-4">
+    <div class="row">
+  <% if (data && data.length > 0) 
+  { %> <% data.forEach((el) => { %>
+
+  
+    
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem">
+          <img
+            src="<%= el.imageUrl%>"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title"><%= el.Title %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%= el.SubTitle %></h6>
+            <p class="card-text">
+                <%= el.Comment %>
+            </p>
+            <a href="#" class="btn btn-danger mr-2"
+              > Delete</a>
+            <a href="#" class="btn btn-info"></i> Update</a>
+          </div>
+        </div>  
+      </div>
+    
+
+  <% }); %>
+</div> <% }
+   else { %>
+  <p>No data available</p>
+  <% } %>
+
+</div>
+
+<%- include("partials/footer.ejs") %>

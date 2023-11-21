@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+
+  <div style="width: 400px; margin: auto; height: 30em;">
+    <form action="/submit" method="post">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Image Url</label>
+      <input type="url" class="form-control" id="exampleFormControlInput1" placeholder="Type Image Url" name="url">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Title</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title" name="title">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Sub Title</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Sub-Title" name="sub-title">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label" >Comment</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="comment"></textarea>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary">
+  </form>
+  </div>
+  <%- include("partials/footer.ejs") %>
+
+</body>
+
+</html>
