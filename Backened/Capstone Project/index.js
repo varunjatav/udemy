@@ -1,4 +1,5 @@
 import bodyParser from "body-parser";
+import { v4 as uuidv4 } from 'uuid';
 import express from "express";
 
 const app = express();
@@ -11,7 +12,11 @@ app.get("/", (req, res) => {
 });
 var data = [];
 app.post("/submit", (req, res) => {
+  req.params.id = uuidv4();
+
+  console.log(req.params);
   data.push({
+    id: uuidv4(),
     imageUrl: req.body["url"],
     Title: req.body["title"],
     SubTitle: req.body["sub-title"],
@@ -22,6 +27,10 @@ app.post("/submit", (req, res) => {
   res.render("posts.ejs", { data });
 
 });
+ 
+app.delete("/submit/:id", (req, res) => {
+})
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
