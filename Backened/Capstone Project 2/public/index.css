@@ -1,0 +1,12 @@
+.head{
+    text-align: center;
+}
+.container{
+    margin: auto;
+    width: 50%;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+}
