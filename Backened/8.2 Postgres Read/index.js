@@ -29,7 +29,7 @@ db.query("SELECT * FROM flags", (err, result) => {
     console.error("Error executing query " , err.stack );
   }else{
     quiz = result.rows
-  }
+  }   
   db.end();
 });
 
