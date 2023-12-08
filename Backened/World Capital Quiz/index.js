@@ -22,7 +22,6 @@ db.query("SELECT * FROM capitals", (err, res) => {
     console.error("Error executing query", err.stack);
   } else {
     quiz = res.rows;
-    // console.log("Qiuz: ", quiz);
   }
   db.end();
 });
